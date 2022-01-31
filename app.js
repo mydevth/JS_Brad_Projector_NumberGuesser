@@ -50,6 +50,13 @@ guessBtn.addEventListener('click', function () {
     // Wrong number
     guessesLeft -= 1;
 
+    //hit number 
+    let hitNum;
+    guessInput.value > winningNum ? hitNum = 'ตัวเลขมากไป' : hitNum = 'ตัวเลขน้อยไป';
+    console.log(guessInput.value);
+    console.log(winningNum);
+    console.log(hitNum);
+
     if (guessesLeft === 0) {
       // Game over - lost
       gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
@@ -63,7 +70,7 @@ guessBtn.addEventListener('click', function () {
       guessInput.value = '';
 
       // Tell user its the wrong number
-      setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+      setMessage(`${guess} is not correct, ${hitNum} , ${guessesLeft} guesses left`, 'red');
     }
   }
 });
