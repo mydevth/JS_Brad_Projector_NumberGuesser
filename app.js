@@ -53,9 +53,9 @@ guessBtn.addEventListener('click', function () {
     //hit number 
     let hitNum;
     guessInput.value > winningNum ? hitNum = 'ตัวเลขมากไป' : hitNum = 'ตัวเลขน้อยไป';
-    console.log(guessInput.value);
-    console.log(winningNum);
-    console.log(hitNum);
+    // console.log(guessInput.value);
+    // console.log(winningNum);
+    // console.log(hitNum);
 
     if (guessesLeft === 0) {
       // Game over - lost
